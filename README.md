@@ -9,7 +9,7 @@ npx shadow-cljs watch :app
 enter command in another terminal to start cljs-repl:
 npx shadow-cljs cljs-repl :app
 
-##setup nvim/conjure to interact with cljs-repl:
+## setup nvim/conjure to interact with cljs-repl:
 nvim : <enter the command below>
 ConjureConnect localhost:<nREPL port started by shadow-cljs>
 
