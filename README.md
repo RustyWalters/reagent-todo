@@ -11,7 +11,7 @@ npx shadow-cljs cljs-repl :app
 
 ## setup nvim/conjure to interact with cljs-repl:
 nvim : <enter the command below>
-ConjureConnect localhost:<nREPL port started by shadow-cljs>
+ConjureConnect localhost: [nREPL port started by shadow-cljs]
 
 nvim : <enter the command below>
 ConjureShadowSelect app
