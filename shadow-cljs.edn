@@ -1,0 +1,9 @@
+;; shadow-cljs configuration
+{:deps true
+ :builds {:app 
+          {:target :browser 
+           :output-dir "public/scripts" 
+           :asset-path "/scripts/" 
+           :modules {:main {:init-fn com.walters.core/run}} 
+           :devtools {:http-root "public" 
+                      :http-port 8081}}}}
