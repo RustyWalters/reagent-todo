@@ -1,28 +1,23 @@
 (ns com.walters.core
-  (:require [reagent.core :as r]
-            [reagent.dom :as rdom]))
+  (:require [reagent.dom :as rdom]))
 
-(defn another-component []
+(defn title []
+  [:h1 "todos"])
+
+(defn todo-app []
   [:div
-   [:p "I am another component"]
-   [:p
-    "I have " [:strong "bold"
-                       [:span {:style {:color "blue"}} " and blue "] "text."]]])
- 
-(defn simple-component []
-  [:div
-   [:p "I am a component"]
-   [:p
-    "I have " [:strong "bold"
-                       [:span {:style {:color "red"}} " and red "] "text."]]
-   [another-component]])
+   [:section.todoapp
+    [:header.header
+      [title]]]])
 
-
-(defn ^:export run []
-  (rdom/render [simple-component]
+(defn start []
+  (js/console.log "Starting ...")
+  (rdom/render [todo-app]
             (.getElementById js/document "app")))
 
-(comment
-  (js/alert "Hello, World!")
-  (another-component))
+(defn stop []
+  (js/console.log "Stopping ..."))
+
+(defn ^:export run []
+  (start))
   

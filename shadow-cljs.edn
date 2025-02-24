@@ -5,5 +5,7 @@
            :output-dir "public/scripts" 
            :asset-path "/scripts/" 
            :modules {:main {:init-fn com.walters.core/run}} 
-           :devtools {:http-root "public" 
+           :devtools {:before-load com.walters.core/stop
+                      :after-load com.walters.core/start
+                      :http-root "public" 
                       :http-port 8081}}}}
